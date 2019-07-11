@@ -78,3 +78,6 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Wed Jul 10 06:48:57.803040 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
 [Wed Jul 10 06:48:57.803108 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Wed Jul 10 07:20:58.201735 2019] [php7:error] [pid 19] [client 172.21.0.1:55504] script '/var/www/html/Testdatabase.php' not found or unable to stat
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jul 11 09:10:57.701518 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Thu Jul 11 09:10:57.701613 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
