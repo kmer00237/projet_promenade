@@ -31,12 +31,14 @@ INSERT INTO Promenades (
     description
 )
    VALUES("Toto","2019-07-10","SUISSE","Lausanne","1000","Les Hauts de Lausanne","assets/pêche.jpg","Gare de Renens","Gare de Renens","un parcours excellent"); 
+
+
 /*
+CREATE USER "adminPromenade"@"%" IDENTIFIED BY "Promensuisse";
+GRANT ALL PRIVILEGES ON Promensuisse.* TO "adminPromenade"@"%";
 
 
-CREATE USER "adminToutou"@"%" IDENTIFIED BY "Annu@ireT0ut0u";
-GRANT ALL PRIVILEGES ON AnnuaireToutou.* TO "adminToutou"@"%";
-
+/*
 --Insérer un maitre
 INSERT INTO Maitres (nom, telephone)
 VALUES ('Bob', '0798767654');
