@@ -10,7 +10,8 @@ require_once("database.php");
 // Création de la connexion
 $database = new Database();
 // Récupération de la liste de chiens
-$listeChiens = $database->getAllDogs();
+// $id, $auteur, $date, $pays, $ville, $case_postale, $titre, $image 	depart 	arrivée 	description 
+$listePromenade = $database->getAllPromenade();
 ?>
 <html>
     <header>
@@ -18,8 +19,6 @@ $listeChiens = $database->getAllDogs();
     </header>
     <body>
     
-    <a href="create-chien.php"><input type="button" value=" Créer un chien "></a>
-    <a href="update-chien.php"><input type="button" value=" Modifier un chien "></a>
     <br>
     <h1>Liste des promenades</h1>
         <h2></h2>
@@ -29,10 +28,10 @@ $listeChiens = $database->getAllDogs();
             <li>
             <?php   echo "<a href=afficher.php?id=".$listePromenade->getId().">";
             echo " image ".$listePromenade->getImage().
-            "Le titre".$listePromenade->getTitre().
-            " : Nom de l'auteur".$listePromenade->getAuteur().
-            " Pays ".$listePromenade->getPays().
-            " Ville ".$listePromenade->getVille().
+            " : Le titre :".$listePromenade->getTitre().
+            " : Nom de l'auteur :".$listePromenade->getAuteur().
+            " Pays :".$listePromenade->getPays().
+            " Ville :".$listePromenade->getVille().
             "</a>";
             ?>
             </li>

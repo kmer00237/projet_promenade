@@ -8,9 +8,9 @@ class Database{
     public function __construct(){
         $PARAM_hote="mariadb";                  //Le chemin vers le serveur
         $PARAM_port="3306";                     //Le port de connexion à la base de données
-        $PARAM_nom_bd="";         //Le nom de ma base de données
-        $PARAM_utilisateur="adminToutou";       //Nom d'utilisateur pour se connecter
-        $PARAM_mot_passe="Annu@ireT0ut0u";      //Mot de passe de l'utilisateur pour se connecter
+        $PARAM_nom_bd="Promensuisse";         //Le nom de ma base de données
+        $PARAM_utilisateur="root";       //Nom d'utilisateur pour se connecter
+        $PARAM_mot_passe="digital2019";      //Mot de passe de l'utilisateur pour se connecter
 
         try{        //Le code qu'on essaye de faire
             $this->connexion = new PDO("mysql:dbname=" .$PARAM_nom_bd.";host=".$PARAM_hote,
@@ -56,6 +56,23 @@ class Database{
         $id = $this->connexion->lastInsertId();
         return $id;
     }//Fin fonction insertRandonnee
+
+    //Fonction pour lister toutes les promenades
+    public function getAllPromenade(){
+        // On prépare la requete
+        $pdoStatement = $this->connexion->prepare(
+            "SELECT image, titre, auteur, pays, ville FROM Promenades"
+        );
+
+        // On exécute la requete
+        $pdoStatement->execute();
+
+        // On stocke en php le résultat de la requete
+        $Promenade = $pdoStatement->fetchAll(PDO::FETCH_CLASS, "Promenades");
+
+        // Je retourne la liste de chiens
+        return $Promenade;
+    }//Fin fonction pour lister toutes les promenades
 
 }   // Fin Database
 ?>
