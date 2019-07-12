@@ -940,3 +940,7 @@ localhost:80 172.24.0.1 - - [12/Jul/2019:12:48:57 +0000] "GET /afficherPromenade
 localhost:80 172.24.0.1 - - [12/Jul/2019:12:48:57 +0000] "GET /style.css HTTP/1.1" 200 516 "http://localhost/afficherPromenade.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"
 localhost:80 172.24.0.1 - - [12/Jul/2019:12:49:56 +0000] "GET /afficherPromenade.php HTTP/1.1" 200 573 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"
 localhost:80 172.24.0.1 - - [12/Jul/2019:12:49:56 +0000] "GET /style.css HTTP/1.1" 200 516 "http://localhost/afficherPromenade.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"
+localhost:80 172.24.0.1 - - [12/Jul/2019:12:57:29 +0000] "GET /afficherPromenade.php HTTP/1.1" 200 570 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"
+localhost:80 172.24.0.1 - - [12/Jul/2019:12:57:29 +0000] "GET /style.css HTTP/1.1" 200 516 "http://localhost/afficherPromenade.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"
+localhost:80 172.24.0.1 - - [12/Jul/2019:13:14:07 +0000] "GET /afficherPromenade.php HTTP/1.1" 200 613 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"
+localhost:80 172.24.0.1 - - [12/Jul/2019:13:14:07 +0000] "GET /style.css HTTP/1.1" 200 516 "http://localhost/afficherPromenade.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0"

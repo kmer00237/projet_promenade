@@ -31,8 +31,22 @@ INSERT INTO Promenades (
     description
 )
    VALUES("Toto","2019-07-10","SUISSE","Lausanne","1000","Les Hauts de Lausanne","assets/pêche.jpg","Gare de Renens","Gare de Renens","un parcours excellent"); 
-
-
+/*insert nouvelle promenade*/
+INSERT INTO Promenades ( 
+    auteur,
+    date,
+    pays,
+    ville,
+    case_postale, 
+    titre,
+    image,
+    depart,
+    arrivée,
+    description
+)
+   VALUES("Francine","2019-07-12","Suisse","Guele","1295","Le barrage d'emosson","assets/chabaix.jpg","Gare de Renens","Gare de Renens","Lieu fantastique avec un cadre exceptionnel au coeur des Alpes. Le barrage est impressionnant et le lac majestueux. Une bouffée d'air frais lors des étés caniculaires qu'il ne faudrait surtout pas se priver de réitérer."); 
+/*insert nouvelle promenade*/
+VALUES("Pierre","2019-07-12","Suisse","Guele","1295","Le barrage d'emosson","assets/chabaix.jpg","Gare de Renens","Gare de Renens","Lieu fantastique avec un cadre exceptionnel au coeur des Alpes. Le barrage est impressionnant et le lac majestueux. Une bouffée d'air frais lors des étés caniculaires qu'il ne faudrait surtout pas se priver de réitérer."); 
 /*
 CREATE USER "adminPromenade"@"%" IDENTIFIED BY "Promensuisse";
 GRANT ALL PRIVILEGES ON Promensuisse.* TO "adminPromenade"@"%";
