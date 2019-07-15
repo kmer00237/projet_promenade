@@ -1,16 +1,13 @@
-<html>
-    <head>
-        <title>Afficher tous les chiens</title>
-		<meta charset="UTF-8">
-    </head>
-</html>
+
 <?php
 // Import de la databse
 require_once("database.php");
+
 // Création de la connexion
 $database = new Database();
-// Récupération de la liste de chiens
-// $id, $auteur, $date, $pays, $ville, $case_postale, $titre, $image 	depart 	arrivée 	description 
+
+// Récupération de la liste de promenade
+// $id, $auteur, $date, $pays, $ville, $case_postale, $titre, $image, depart ,arrivée ,description 
 $listePromenade = $database->getAllPromenade();
 ?>
 <html>
@@ -37,5 +34,5 @@ $listePromenade = $database->getAllPromenade();
             </li>
             <?php } ?>
         </ul>
-    </body>
+        </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 
-require_once("classPromenade.php");
 class Database{
     private $connexion;
 
@@ -9,9 +8,10 @@ class Database{
         $PARAM_hote="mariadb";                  //Le chemin vers le serveur
         $PARAM_port="3306";                     //Le port de connexion à la base de données
         $PARAM_nom_bd="Promensuisse";         //Le nom de ma base de données
-        $PARAM_utilisateur="root";       //Nom d'utilisateur pour se connecter
+        $PARAM_utilisateur="root";            //Nom d'utilisateur pour se connecter
         $PARAM_mot_passe="digital2019";      //Mot de passe de l'utilisateur pour se connecter
 
+      
         try{        //Le code qu'on essaye de faire
             $this->connexion = new PDO("mysql:dbname=" .$PARAM_nom_bd.";host=".$PARAM_hote,
                                 $PARAM_utilisateur, 
@@ -50,9 +50,7 @@ class Database{
             "paramArrivée"=>$arrivéePromenade,
             "paramDescription"=>$descriptionPromenade
         ));           
-
-
-        //Je récupère l'id qui a été créé par la base de données
+        //Je récupère l'id qui a été crée par la base de données
         $id = $this->connexion->lastInsertId();
         return $id;
     }//Fin fonction insertRandonnee
@@ -63,16 +61,20 @@ class Database{
         $pdoStatement = $this->connexion->prepare(
             "SELECT image, titre, auteur, pays, ville FROM Promenades"
         );
-
+        
         // On exécute la requete
         $pdoStatement->execute();
 
         // On stocke en php le résultat de la requete
         $Promenade = $pdoStatement->fetchAll(PDO::FETCH_CLASS, "Promenades");
 
-        // Je retourne la liste de chiens
+        // Je retourne la liste des promenades
         return $Promenade;
-    }//Fin fonction pour lister toutes les promenades
+    }//Fin fonction pour lister toutes les promenades 
+
+    public function getPromenadeById($id) {
+        
+    }
 
 }   // Fin Database
 ?>

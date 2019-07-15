@@ -81,3 +81,26 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.3. Set the 'ServerName' directive globally to suppress this message
 [Thu Jul 11 09:10:57.701518 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
 [Thu Jul 11 09:10:57.701613 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jul 12 09:45:01.611143 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
+[Fri Jul 12 09:45:04.800479 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
+[Fri Jul 12 09:45:05.725783 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
+[Fri Jul 12 09:45:06.716822 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
+[Fri Jul 12 09:45:07.468871 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
+[Fri Jul 12 09:54:06.303430 2019] [php7:error] [pid 20] [client 172.19.0.1:60850] script '/var/www/html/Testdatabase.php' not found or unable to stat
+[Fri Jul 12 09:54:45.663256 2019] [php7:error] [pid 18] [client 172.19.0.1:60872] script '/var/www/html/create-chien.php' not found or unable to stat
+[Fri Jul 12 09:56:13.488364 2019] [php7:error] [pid 16] [client 172.19.0.1:60896] script '/var/www/html/formulaire promenade.php' not found or unable to stat
+[Fri Jul 12 14:43:37.835580 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Jul 13 07:37:27.872915 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Sat Jul 13 07:37:27.873574 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sat Jul 13 07:37:37.418332 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Jul 13 07:38:01.034858 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Sat Jul 13 07:38:01.034909 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jul 15 06:56:32.748637 2019] [php7:error] [pid 19] [client 172.18.0.1:33126] script '/var/www/html/afficherChien.php' not found or unable to stat
+[Mon Jul 15 07:28:18.797714 2019] [php7:error] [pid 21] [client 172.18.0.1:33342] script '/var/www/html/afficherFormulaire.php' not found or unable to stat
+[Mon Jul 15 07:28:57.371125 2019] [php7:error] [pid 22] [client 172.18.0.1:33348] script '/var/www/html/afficherFormulaire.php' not found or unable to stat
+[Mon Jul 15 07:30:25.353683 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Jul 15 07:50:33.696468 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Mon Jul 15 07:50:33.697135 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
