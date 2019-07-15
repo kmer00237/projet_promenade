@@ -1,9 +1,3 @@
-<html>
-    <head>
-        <title>Afficher tous les chiens</title>
-		<meta charset="UTF-8">
-    </head>
-</html>
 <?php
 // Import de la databse
 require_once("database.php");
@@ -25,17 +19,24 @@ $listePromenade = $database->getAllPromenade();
 
         <ul>
         <?php foreach($listePromenade as $listePromenade){ ?>
-            <li>
-            <?php   echo "<a href=afficher.php?id=".$listePromenade->getId().">";
-            echo " image ".$listePromenade->getImage().
-            " : Le titre :".$listePromenade->getTitre().
-            " : Nom de l'auteur :".$listePromenade->getAuteur().
-            " Pays :".$listePromenade->getPays().
-            " Ville :".$listePromenade->getVille().
-            "</a>";
-            ?>
-            </li>
-            <?php } ?>
+            <html>
+            <div class="container-fluid barre text-white">
+            <div class="row">
+                <div class="col-sm-4">
+                    <li>
+                        <?php   echo "<a href=afficher.php?id=".$listePromenade->getId().">";
+                        echo " image ".$listePromenade->getImage($image).
+                        " : Le titre :".$listePromenade->getTitre().
+                        " : Nom de l'auteur :".$listePromenade->getAuteur().
+                        " Pays :".$listePromenade->getPays().
+                        " Ville :".$listePromenade->getVille().
+                        "</a>";
+                        ?>
+                    </li>
+                </div>
+            </div>
+            </div>
+        <?php } ?>
         </ul>
     </body>
 </html>
