@@ -10,7 +10,7 @@
         private $titre;
         private $image;
         private $depart;
-        private $arrivée;
+        private $arrivee;
         private $description;
         
         // Constructeur par defaut
