@@ -1,4 +1,5 @@
 <?php
+require_once('classPromenade.php');
 
 class Database{
     private $connexion;
@@ -49,7 +50,7 @@ class Database{
             "paramDepart"=>$departPromenade,
             "paramArrivée"=>$arrivéePromenade,
             "paramDescription"=>$descriptionPromenade
-        ));           
+        ));           https://duckduckgo.com/?q=localhost%2Fformulaire+Promenade.php&t=canonical&atb=v172-1&ia=web
         //Je récupère l'id qui a été crée par la base de données
         $id = $this->connexion->lastInsertId();
         return $id;
@@ -70,11 +71,32 @@ class Database{
 
         // Je retourne la liste des promenades
         return $Promenade;
-    }//Fin fonction pour lister toutes les promenades 
+    }   //Fin fonction pour lister toutes les promenades
 
-    public function getPromenadeById($id) {
-        
+        //Fonction qui recupre une promenade en fonction de son id
+    
+     public function getPromenadeById($id){
+
+        // Je prépare ma requête
+        $pdoStatement = $this->connexion->prepare(
+            "SELECT  id, auteur, date, pays, ville, case_postale, titre, image, depart, 'arrivée', description
+            FROM Promenades            
+            WHERE id = :id"
+        );
+
+        // J'exécute ma requête
+        $pdoStatement->execute([
+            "id" => $id
+        ]);
+
+        var_dump($pdoStatement->errorInfo());
+         // Je recupere et je stocke le resultat
+         $idPromenade = $pdoStatement->fetchObject("Promenades");
+           //var_dump($idPromenade);
+         return $idPromenade;              
+    
+    }//Fin fonction pour lister toutes les promenades   
     }
 
-}   // Fin Database
+
 ?>

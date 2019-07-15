@@ -21,21 +21,38 @@
 </head>
 
 <body>
-   
+   //$id ,$nomAuteur, $datePromenade, $paysPromenade, $villePromenade,
+     $case_postalePromenade, $titrePromenade,$imagePromenade, $departPromenade, $arrivéePromenade, $descriptionPromenade
+
     <h1>Ajout d'une nouvelle promenade</h1>
 
         <form action="process-create.php" method="POST">
+
+            <label for="idPromenade">Id</label>
+            <input type="number" id="idPromenade" name="id">
+
+
             <label for="nomAuteur">Auteur</label>
-            <input type="text" id="nomAuteur" name="nom">
+            <input type="text" id="nomAuteur" name="auteur">
 
             <label for="datePromenade">Date</label>
-            <input type="number" id="datePromenade" name="age">
-            <label for="raceChien">Pays</label>
-            <input type="text" id="raceChien" name="race">
-            <label for="choixMaitre">Ville</label>
-            <select id="choixMaitre" name="idMaitre">
-            <label for="choixMaitre">Case-postale</label>
-            <select id="choixMaitre" name="idMaitre">
+            <input type="number" id="datePromenade" name="date">
+
+            <label for="paysPromenade">Pays</label>
+            <input type="text" id="paysPromenade" name="pays">
+
+            <label for="villePromenade">Ville</label>
+            <input type="departPromenade" name="ville">
+
+            <label for="case_postalePromenade">case_postale</label>
+            <input type="departPromenade" name="case_postale">
+
+            <label for="titrePromenade">Titre</label>
+            <input type="titrePromenade" name="titre">
+
+
+
+            
 
 
                   <?php

@@ -8,4 +8,7 @@ if($database->getConnexion()== null){
 }else{
     echo "Connexion réussie";
 }
+
+$res = $database->GetPromenadeById(1);
+echo $res ;
 ?>
