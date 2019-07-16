@@ -81,6 +81,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.3. Set the 'ServerName' directive globally to suppress this message
 [Thu Jul 11 09:10:57.701518 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
 [Thu Jul 11 09:10:57.701613 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+<<<<<<< HEAD
 [Fri Jul 12 09:45:01.611143 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
 [Fri Jul 12 09:45:04.800479 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
 [Fri Jul 12 09:45:05.725783 2019] [php7:error] [pid 21] [client 172.19.0.1:60786] script '/var/www/html/formulairePromenade.php' not found or unable to stat
@@ -113,3 +114,11 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
 [Mon Jul 15 08:13:47.032845 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
 [Mon Jul 15 08:13:47.032923 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+=======
+[Fri Jul 12 18:07:42.032484 2019] [php7:error] [pid 22] [client 172.24.0.1:51032] script '/var/www/html/ajouterPromenade.php' not found or unable to stat, referer: http://localhost/
+[Fri Jul 12 18:39:30.087961 2019] [php7:error] [pid 21] [client 172.24.0.1:51782] script '/var/www/html/ajouterPromenade.php' not found or unable to stat, referer: http://localhost/
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sat Jul 13 22:19:48.981111 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Sat Jul 13 22:19:48.981761 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jul 15 06:35:13.640605 2019] [php7:error] [pid 20] [client 172.24.0.1:49416] script '/var/www/html/index.php' not found or unable to stat
+>>>>>>> master

@@ -10,7 +10,7 @@
         private $titre;
         private $image;
         private $depart;
-        private $arrivée;
+        private $arrivee;
         private $description;
         
         // Constructeur par defaut
@@ -43,7 +43,7 @@
         public function getDepart(){
             return $this->depart;
         }
-        public function getArrivée(){
+        public function getArrivee(){
             return $this->arrivee;
         }
         public function getDescription(){

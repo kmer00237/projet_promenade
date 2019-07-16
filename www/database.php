@@ -50,7 +50,7 @@ class Database{
             "paramDepart"=>$departPromenade,
             "paramArrivée"=>$arrivéePromenade,
             "paramDescription"=>$descriptionPromenade
-        ));           https://duckduckgo.com/?q=localhost%2Fformulaire+Promenade.php&t=canonical&atb=v172-1&ia=web
+        ));           
         //Je récupère l'id qui a été crée par la base de données
         $id = $this->connexion->lastInsertId();
         return $id;
@@ -76,7 +76,7 @@ class Database{
         //Fonction qui recupre une promenade en fonction de son id
     
      public function getPromenadeById($id){
-
+-
         // Je prépare ma requête
         $pdoStatement = $this->connexion->prepare(
             "SELECT  id, auteur, date, pays, ville, case_postale, titre, image, depart, 'arrivée', description

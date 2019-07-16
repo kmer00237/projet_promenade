@@ -1,38 +1,41 @@
-
 <?php
-// Import de la databse
 require_once("database.php");
-
-// Création de la connexion
+require_once("classPromenade.php");
+//creation de la nouvelle connexion
 $database = new Database();
-
-// Récupération de la liste de promenade
-// $id, $auteur, $date, $pays, $ville, $case_postale, $titre, $image, depart ,arrivée ,description 
-$listePromenade = $database->getAllPromenade();
+//fonction GET permet de recupérer ce que nous avons dans la base de donnés par l'url
+$id = $_GET["id"];
+// Recupere une promenade en fonction de son id
+$promenade = $database->getPromenadeById($id);
+var_dump($promenade);
 ?>
-<html>
-    <header>
-        <link rel="stylesheet" href="style.css"> 
-    </header>
-    <body>
-    
-    <br>
-    <h1>Liste des promenades</h1>
-        <h2></h2>
 
-        <ul>
-        <?php foreach($listePromenade as $listePromenade){ ?>
-            <li>
-            <?php   echo "<a href=afficher.php?id=".$listePromenade->getId().">";
-            echo " image ".$listePromenade->getImage().
-            " : Le titre :".$listePromenade->getTitre().
-            " : Nom de l'auteur :".$listePromenade->getAuteur().
-            " Pays :".$listePromenade->getPays().
-            " Ville :".$listePromenade->getVille().
-            "</a>";
-            ?>
-            </li>
-            <?php } ?>
-        </ul>
-        </body>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promensuisse</title>
+</head>
+<body class="bg-1">
+ 
+<div class=infoPromenade> 
+<h1>Choisir une promenade</h1>
+<p>Auteur : <?php echo $promenade->getAuteur();?></p>
+<p>Date : <?php echo $promenade->getDate();?></p>
+<p>Pays : <?php echo $promenade->getPays();?></p>
+<p>Ville : <?php echo $promenade->getVille();?></p>
+<p>Case-postale : <?php echo $promenade->getCase_postale();?></p>
+<p>Titre : <?php echo $promenade->getTitre();?></p>
+<p>Image : <?php echo $promenade->getImage();?></p>
+<p>Depart : <?php echo $promenade->getDepart();?></p>
+<p>Arrivée : <?php echo $promenade->getArrivée();?></p>
+<p>Description : <?php echo $promenade->getDescription();?></p>
+</div>
+  
+</body>
 </html>
