@@ -122,3 +122,18 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sat Jul 13 22:19:48.981761 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Mon Jul 15 06:35:13.640605 2019] [php7:error] [pid 20] [client 172.24.0.1:49416] script '/var/www/html/index.php' not found or unable to stat
 >>>>>>> master
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 16 07:18:29.360428 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Tue Jul 16 07:18:29.360518 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 16 07:54:53.815231 2019] [php7:error] [pid 18] [client 172.21.0.1:55262] script '/var/www/html/formulairePromenade.php' not found or unable to stat, referer: http://localhost/formulairePromenade.php
+[Tue Jul 16 07:54:57.501540 2019] [php7:error] [pid 18] [client 172.21.0.1:55262] script '/var/www/html/formulairePromenade.php' not found or unable to stat, referer: http://localhost/formulairePromenade.php
+[Tue Jul 16 07:54:58.335729 2019] [php7:error] [pid 18] [client 172.21.0.1:55262] script '/var/www/html/formulairePromenade.php' not found or unable to stat, referer: http://localhost/formulairePromenade.php
+[Tue Jul 16 14:30:54.103331 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 16 14:31:08.260756 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Tue Jul 16 14:31:08.260872 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jul 17 09:08:02.559306 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.23.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 17 09:08:20.253442 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jul 17 09:08:20.253540 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jul 17 09:43:22.675951 2019] [php7:error] [pid 18] [client 172.23.0.1:46598] script '/var/www/html/index.php' not found or unable to stat, referer: http://localhost/ajouterPromenade.php

@@ -24,7 +24,7 @@ var_dump($promenade);
 <body class="bg-1">
  
 <div class=infoPromenade> 
-<h1>Choisir une promenade</h1>
+<h1>Afficher promenade</h1>
 <p>Auteur : <?php echo $promenade->getAuteur();?></p>
 <p>Date : <?php echo $promenade->getDate();?></p>
 <p>Pays : <?php echo $promenade->getPays();?></p>
@@ -33,7 +33,7 @@ var_dump($promenade);
 <p>Titre : <?php echo $promenade->getTitre();?></p>
 <p>Image : <?php echo $promenade->getImage();?></p>
 <p>Depart : <?php echo $promenade->getDepart();?></p>
-<p>Arrivée : <?php echo $promenade->getArrivée();?></p>
+<p>Arrivée : <?php echo $promenade->getArrivee();?></p>
 <p>Description : <?php echo $promenade->getDescription();?></p>
 </div>
   

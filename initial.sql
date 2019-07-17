@@ -11,7 +11,7 @@ CREATE TABLE Promenades (
     titre VARCHAR(100),
     image VARCHAR(200),
     depart VARCHAR(200),
-    arrivée VARCHAR(200),
+    arrivee VARCHAR(200),
     description VARCHAR(255)
 );
 
@@ -27,7 +27,7 @@ INSERT INTO Promenades (
     titre,
     image,
     depart,
-    arrivée,
+    arrivee,
     description
 )
    VALUES("Toto","2019-07-10","SUISSE","Lausanne","1000","Les Hauts de Lausanne","assets/pêche.jpg","Gare de Renens","Gare de Renens","un parcours excellent"); 
@@ -41,7 +41,7 @@ INSERT INTO Promenades (
     titre,
     image,
     depart,
-    arrivée,
+    arrivee,
     description
 )
    VALUES("Francine","2019-07-12","Suisse","Guele","1295","Le barrage d'emosson","assets/chabaix.jpg","Gare de Renens","Gare de Renens","Lieu fantastique avec un cadre exceptionnel au coeur des Alpes. Le barrage est impressionnant et le lac majestueux. Une bouffée d'air frais lors des étés caniculaires qu'il ne faudrait surtout pas se priver de réitérer."); 
@@ -78,3 +78,5 @@ DELETE FROM Chiens WHERE id = 23
 UPDATE chiens Set nom = "edmon" , age = 4, race = "chiwawa"
 WHERE id = 25
 */
+
+INSERT INTO Promenades (auteur, date, pays, ville, case_postale, titre, image, depart, arrivee, description) VALUES ('toto','toto','toto','toto',1200,'toto','toto','toto','toto','toto' );
