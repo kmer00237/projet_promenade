@@ -30,7 +30,8 @@ $listePromenade = $database->getAllPromenade();
             <div class="row">
                 <div class="col-sm-4">
                     <li>
-                        <?php   echo "<a href=afficher.php?id=".$listePromenade->getId().">";
+                        <?php   echo "<a href=afficher.php?id="
+                        .$listePromenade->getId().">";
                         echo " image ".$listePromenade->getImage().
                         " : Le titre :".$listePromenade->getTitre().
                         " : Nom de l'auteur :".$listePromenade->getAuteur().

@@ -1,3 +1,4 @@
+<?php
 $cp = $_POST["cp"];
 $ville = $_POST["ville"];
 $pays = $_POST["pays"];
@@ -50,4 +51,10 @@ if (isset($_POST["submit"])){                         //création de paramettre 
 require_once("DataBase.php");
 $database = new DataBase();
 
-$nouvelId = $database->insertRando($titre, $auteur, $cp, $ville, $pays, $depart, $arrivee, $fileDestination, $itineraire);
+$nouvelId = $database->insertRandonnee($auteurPromenade, 
+$datePromenade, $paysPromenade, $villePromenade, 
+$case_postalePromenade, $titrePromenade, $imagetPromenade, 
+$departPromenade, $arriveePromenade, $descriptionPromenade);
+
+header('Location: AfficherPromenade.php?id=$id');
+?>

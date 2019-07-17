@@ -46,7 +46,7 @@ $Promenade = $database->getPromenadeById($id);
         </div>
     </header>
     <main>
-        <!--Maintest-->
+        <!--Main-->
         <div class="container-fluid" style="margin-top: 1%; margin-bottom: 1%;">
             <div class="row">
                 <div class="col-sm-6 d-flex justify-content-center text-center">

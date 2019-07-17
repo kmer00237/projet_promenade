@@ -52,12 +52,15 @@ $listePromenade = $database->getAllPromenade();
             <div class="row">
                 <div class="col-sm-4">
                     <div class="imageProm">
+                    <?php   echo "<a href=afficher.php?id=".$vignette->getId().">";
+                        echo "img src="echo"".$Promenade->getImage()."";
                         
-                        <?php  echo "<a href'=afficher.php?id=".$vignette->getId()."'>";
+                        
+                       
+                        <?php  echo "<a href'=afficher.php?id=".$vignette->getId().">";
 
-                      echo "   <img src='<?php $vignette->getImage()  ?> ' >";
-                        .$vignette->getImage().">" 
-                        .$vignette->getTitre();?>
+                        
+                        echo .$vignette->getTitre().
                         <?php echo $vignette->getPays();?>
                         <?php echo $vignette->getVille();?>
                         <?php var_dump();?> 
