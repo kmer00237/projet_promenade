@@ -1,15 +1,43 @@
 /*section MenuBar*/
 .barre {
     width:100%;
+    height: 50px;
     background:rgb(28, 168, 0);
     
 }
+
 .logo{
     width:50%;
     height:50%;
 }
+
 body {margin:0;}
 
 .colMenu {
     background:rgb(28, 168, 0);
-    }
+    margin-top: 5px; 
+    font-size: 10%;
+}
+
+main {
+    height: auto;
+}
+
+.imageProm{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: aqua;
+    align-content: center;
+    text-align: center; 
+}
+.Description {
+    width: 60%;
+}
+footer {
+    width:100%;
+    height: 50px;
+    background:rgb(28, 168, 0);
+    text-align: center;
+    font-size: 10%;
+}

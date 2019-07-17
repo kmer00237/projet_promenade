@@ -14,7 +14,7 @@ class Database{
 
       
         try{        //Le code qu'on essaye de faire
-            $this->connexion = new PDO("mysql:dbname=" .$PARAM_nom_bd.";host=".$PARAM_hote,
+            $this->connexion = new PDO("mysql:dbname=" .$PARAM_nom_bd.";host=".$PARAM_hote.";charset=utf8",
                                 $PARAM_utilisateur, 
                                 $PARAM_mot_passe);
         }catch (Exception $monException){
@@ -36,7 +36,10 @@ class Database{
 
         //Je prépare la requête
         $pdoStatement = $this->connexion->prepare(
-            "INSERT INTO Promenades (auteur, date, pays, ville, case_postale, titre, image, depart, arrivée, description) VALUES (:paramAuteur, :paramDate, :paramPays, :paramCase_postale, :paramTitre, :paramImage, :paramDepart, :paramArrivee, :paramDescription)");
+            "INSERT INTO Promenades (auteur, date, pays, ville, 
+            case_postale, titre, image, depart, arrivée, description) 
+            VALUES (:paramAuteur, :paramDate, :paramPays, :paramCase_postale, 
+            :paramTitre, :paramImage, :paramDepart, :paramArrivee, :paramDescription)");
            
         //J'exécute la requête
         //En lui passant les valeurs en paramètres
@@ -76,27 +79,26 @@ class Database{
         //Fonction qui recupre une promenade en fonction de son id
     
      public function getPromenadeById($id){
--
+
         // Je prépare ma requête
         $pdoStatement = $this->connexion->prepare(
-            "SELECT  id, auteur, date, pays, ville, case_postale, titre, image, depart, 'arrivée', description
+            "SELECT  id, auteur, date, pays, ville, case_postale, titre, 
+            image, depart, arrivee, description
             FROM Promenades            
             WHERE id = :id"
         );
 
         // J'exécute ma requête
-        $pdoStatement->execute([
-            "id" => $id
-        ]);
+        $pdoStatement->execute(["id" => $id]);
 
-        var_dump($pdoStatement->errorInfo());
+        //var_dump($pdoStatement->errorInfo());
          // Je recupere et je stocke le resultat
-         $idPromenade = $pdoStatement->fetchObject("Promenades");
+         $Promenade = $pdoStatement->fetchObject("Promenades");
            //var_dump($idPromenade);
-         return $idPromenade;              
+         return $Promenade;              
     
     }//Fin fonction pour lister toutes les promenades   
-    }
+}
 
 
 ?>
