@@ -16,7 +16,10 @@ $descriptionPromenade = $_POST["description"];
 require_once("database.php");
 $database = new DataBase();
 
-$nouvelId = $database->insertRandonnee($auteurPromenade, $datePromenade, $paysPromenade, $villePromenade, $case_postalePromenade, $titrePromenade, $imagetPromenade, $departPromenade, $arriveePromenade, $descriptionPromenade);
+$nouvelId = $database->insertRandonnee($auteurPromenade, 
+$datePromenade, $paysPromenade, $villePromenade, 
+$case_postalePromenade, $titrePromenade, $imagetPromenade, 
+$departPromenade, $arriveePromenade, $descriptionPromenade);
 
 header('Location: index.php');
 ?> 
