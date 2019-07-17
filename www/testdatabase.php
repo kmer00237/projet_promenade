@@ -11,4 +11,4 @@ if($database->getConnexion()== null){
 
 $res = $database->GetPromenadeById(1);
 echo $res ;
-?>
+?>-c

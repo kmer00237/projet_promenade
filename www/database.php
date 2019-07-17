@@ -9,8 +9,8 @@ class Database{
         $PARAM_hote="mariadb";                  //Le chemin vers le serveur
         $PARAM_port="3306";                     //Le port de connexion à la base de données
         $PARAM_nom_bd="Promensuisse";         //Le nom de ma base de données
-        $PARAM_utilisateur="root";            //Nom d'utilisateur pour se connecter
-        $PARAM_mot_passe="digital2019";      //Mot de passe de l'utilisateur pour se connecter
+        $PARAM_utilisateur="adminSitePromenade";            //Nom d'utilisateur pour se connecter
+        $PARAM_mot_passe="Promen@de";      //Mot de passe de l'utilisateur pour se connecter
 
       
         try{        //Le code qu'on essaye de faire
@@ -30,7 +30,7 @@ class Database{
 
     //Fonction pour insérer une promenade
     public function insertRandonnee($nomAuteur, $datePromenade, $paysPromenade, $villePromenade,
-     $case_postalePromenade, $titrePromenade,$imagePromenade, $departPromenade, $arrivéePromenade, $descriptionPromenade)
+     $case_postalePromenade, $titrePromenade,$imagePromenade, $departPromenade, $arriveePromenade, $descriptionPromenade)
             
     {
 
@@ -44,15 +44,16 @@ class Database{
         //J'exécute la requête
         //En lui passant les valeurs en paramètres
         $pdoStatement->execute(array(
-            "paramAuteur"=>$nomAuteur,
-            "paramDate"=>$datePromenade,
-            "paramPays"=>$paysPromenade,
-            "paramVille"=>$villePromenade,
-            "paramCase_postale"=>$case_postalePromenade,
-            "paramTitre"=>$titrePromenade,
-            "paramDepart"=>$departPromenade,
-            "paramArrivée"=>$arrivéePromenade,
-            "paramDescription"=>$descriptionPromenade
+            'paramAuteur'=>$nomAuteur,
+            'paramDate'=>$datePromenade,
+            'paramPays'=>$paysPromenade,
+            'paramVille'=>$villePromenade,
+            'paramCase_postale'=>$case_postalePromenade,
+            'paramTitre'=>$titrePromenade,
+            'paramImage'=>$imagePromenade,
+            'paramDepart'=>$departPromenade,
+            'paramArrivee'=>$arriveePromenade,
+            'paramDescription'=>$descriptionPromenade
         ));           
         //Je récupère l'id qui a été crée par la base de données
         $id = $this->connexion->lastInsertId();
@@ -93,9 +94,9 @@ class Database{
 
         //var_dump($pdoStatement->errorInfo());
          // Je recupere et je stocke le resultat
-         $Promenade = $pdoStatement->fetchObject("Promenades");
+         $promenade = $pdoStatement->fetchObject("Promenades");
            //var_dump($idPromenade);
-         return $Promenade;              
+         return $promenade;              
     
     }//Fin fonction pour lister toutes les promenades   
 }
