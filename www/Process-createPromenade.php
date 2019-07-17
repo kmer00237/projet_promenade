@@ -53,6 +53,10 @@ if (isset($_POST["submit"])){                         //création de paramettre 
 }//fin de la première condition
 
 
+// Importer et mettre une valeur (instencier) une database
+require_once("DataBase.php");
+$database = new DataBase();
+
 // Importer et mettre une valeur (instancier) une database
 require_once("database.php");
 $database = new DataBase();

@@ -19,16 +19,7 @@ CREATE USER "adminSitePromenade"@"%" IDENTIFIED BY "Promen@de";
 GRANT ALL PRIVILEGES ON Promensuisse.* TO "adminSitePromenade"@"%";
 
 INSERT INTO Promenades ( 
-    auteur,
-    date,
-    pays,
-    ville,
-    case_postale, 
-    titre,
-    image,
-    depart,
-    arrivee,
-    description
+    
 )
    VALUES("Toto","2019-07-10","SUISSE","Lausanne","1000","Les Hauts de Lausanne","assets/pêche.jpg","Gare de Renens","Gare de Renens","un parcours excellent"); 
 /*insert nouvelle promenade*/
