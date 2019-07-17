@@ -27,7 +27,7 @@
   
         <h1>Ajout d'une promenade</h1>
 
-        <form action="process-AjoutPromenade.php" method="POST">
+        <form action="process-AjouterPromenade.php" method="POST">
 
            <div class="container">
 
@@ -35,7 +35,7 @@
                 <input class="col-xs-12 col-md-6 mb-1 mr-1" type="text" name="Auteur" placeholder="Votre nom: "> <br>
              
                     <input class="col-xs-12 col-md-3 mb-1 " type="text" name="Pays" placeholder="Pays:">
-                    <input class="col-xs-12 col-md-3 mb-1 " type="text" name="Pays" placeholder="Code Postale: ">
+                    <input class="col-xs-12 col-md-3 mb-1 " type="text" name="Case postale" placeholder="Case Postale: ">
               
                 </div>  
 
