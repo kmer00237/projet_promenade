@@ -29,8 +29,10 @@ class Database{
     }
 
     //Fonction pour insérer une promenade
-    public function insertRandonnee($nomAuteur, $datePromenade, $paysPromenade, $villePromenade,
-     $case_postalePromenade, $titrePromenade,$imagePromenade, $departPromenade, $arriveePromenade, $descriptionPromenade)
+    public function insertRandonnee($nomAuteur, $datePromenade, 
+    $paysPromenade, $villePromenade, $case_postalePromenade, 
+    $titrePromenade,$imagePromenade, $departPromenade, 
+    $arriveePromenade, $descriptionPromenade)
             
     {
 
@@ -53,7 +55,7 @@ class Database{
             'paramImage'=>$imagePromenade,
             'paramDepart'=>$departPromenade,
             'paramArrivee'=>$arriveePromenade,
-            'paramDescription'=>$descriptionPromenade
+            'paramDescription'=>$descriptionPromenade,
         ));           
         //Je récupère l'id qui a été crée par la base de données
         $id = $this->connexion->lastInsertId();
