@@ -1,4 +1,7 @@
 <?php
+// Page intermediaire => que du php
+
+//récupérer les infos du formulaire avec $_POST
 
 $auteurPromenade = $_POST["auteur"];
 $datePromenade = $_POST_["date"];
@@ -57,7 +60,9 @@ if (isset($_POST["submit"])){                         //création de paramettre 
 require_once("database.php");
 $database = new DataBase();
 
-$nouvelId = $database->insertRandonnee($auteurPromenade, $datePromenade, $paysPromenade, $villePromenade, $case_postalePromenade, $titrePromenade, $imagetPromenade, $departPromenade, $arriveePromenade, $descriptionPromenade);
+$nouvelId = $database->insertRandonnee($auteurPromenade, $datePromenade, 
+$paysPromenade, $villePromenade, $case_postalePromenade, $titrePromenade, 
+$imagetPromenade, $departPromenade, $arriveePromenade, $descriptionPromenade);
 
-header('Location: index.php');
+header("Location: afficherPromenade.php?id=".$nouvelId);
 ?>

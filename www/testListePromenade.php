@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 <?php
+
 // Import de la databse
 require_once("database.php");
 
@@ -22,7 +19,7 @@ $listePromenade = $database->getAllPromenade();
     <br>
     <h1>Liste des promenades</h1>
         <h2></h2>
-
+        
         <ul>
         <?php foreach($listePromenade as $listePromenade){ ?>
             <html>
