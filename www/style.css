@@ -1,4 +1,4 @@
-/*section MenuBar*/
+/*section header | Bandeau*/
 .barre {
     width:100%;
     height: 50px;
@@ -18,11 +18,27 @@ body {margin:0;}
     margin-top: 5px; 
     font-size: 10%;
 }
-
+/*section main*/
 main {
     height: auto;
 }
-
+.vignette {
+    text-align: center;
+    margin: 1%;
+    border: 1%;
+    max-width: 240px;
+    max-height: 600px;
+    background-color: rgb(195, 250, 174);
+}
+.imageIcon {
+    margin-top: 5%;
+    max-width: 200px;
+    height: 150px;
+}
+.textVignette {
+    margin: 2%;
+}
+/*section afficherPromenade*/
 .imageProm{
     width: 300px;
     height: 300px;
@@ -34,6 +50,7 @@ main {
 .Description {
     width: 60%;
 }
+/*section footer | Bas de page*/
 footer {
     width:100%;
     height: 50px;

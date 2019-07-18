@@ -16,8 +16,9 @@
         // Constructeur par defaut
         //Fonctions
         public function _set($id, $value){}
+            
         public function getId(){
-        return $this->id;
+            return $this->id;
         }
         public function getAuteur(){
             return $this->auteur;
