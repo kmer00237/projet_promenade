@@ -71,8 +71,8 @@
             <div class="container">
                 <div class="row textform">
                     <textarea rows="4" cols="50" input class="col-xs-12 col-md-12 mb-12 " 
-                    type="text" id="paramDescription" class="form-control" placeholder="Description:" 
-                    name="description"></textarea>
+                    type="text" id="paramDescription" class="form-control" 
+                    placeholder="Description:" name="description"></textarea>
                 </div>
             </div> 
         </form>

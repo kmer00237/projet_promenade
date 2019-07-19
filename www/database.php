@@ -31,7 +31,7 @@ class Database{
     //Fonction pour insérer une promenade
     public function insertRandonnee($auteurPromenade, 
     $datePromenade, $paysPromenade, $villePromenade, 
-    $case_postalePromenade, $titrePromenade,$imagePromenade, 
+    $case_postalePromenade, $titrePromenade,$fileDestination, 
     $departPromenade, $arriveePromenade, $descriptionPromenade)
             
     {

@@ -39,7 +39,7 @@ $Promenade = $database->getPromenadeById($id);
                     <img src="assets/Home.png"></a>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center colMenu">
-                        <a href="ajouterPromenade.php">
+                        <a href="updatePromenade.php?id=<?php echo $Promenade->getId();?> ">
                             <button type="button" class="btn btn-outline-succes">Modifier Promenade</button></a>
                 </div>
             </div>

@@ -60,9 +60,10 @@ if (isset($_POST["submit"])){                         //création de paramettre 
 require_once("database.php");
 $database = new DataBase();
 
-$nouvelId = $database->insertRandonnee($auteurPromenade, $datePromenade, 
-$paysPromenade, $villePromenade, $case_postalePromenade, $titrePromenade, 
-$fileDestination, $departPromenade, $arriveePromenade, $descriptionPromenade);
+$nouvelId = $database->insertRandonnee($auteurPromenade, 
+$datePromenade, $paysPromenade, $villePromenade, 
+$case_postalePromenade, $titrePromenade, $fileDestination, 
+$departPromenade, $arriveePromenade, $descriptionPromenade);
 
 header("Location: afficherPromenade.php?id=".$nouvelId);
 ?>

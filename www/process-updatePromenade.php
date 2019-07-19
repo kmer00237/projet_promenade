@@ -1,12 +1,9 @@
 <?php
-// Import de la database
-require_once("database.php");
+// Page intermediaire => que du php
 
-//Création de la connexion
-$database = new Database();
+//récupérer les infos du formulaire avec $_POST
 
-
-
+$idPromenade = $_POST["id"];
 $auteurPromenade = $_POST["auteur"];
 $datePromenade = $_POST_["date"];
 $paysPromenade = $_POST["pays"];
@@ -45,7 +42,7 @@ if (isset($_POST["submit"])){                         //création de paramettre 
                 //créer un nom unique
                 $fileNameNew = uniqid("", true).".".$fileActualExt; 
                 //l'image renommée dansdossier de destination
-                $fileDestination = "uploads/".$fileNameNew; 
+                $fileDestination = "assets/".$fileNameNew; 
                 //prendre dans le fichier temporaire et le pousser dans la destination 
                 move_uploaded_file($fileTmpName, $fileDestination); 
                  //inscrit dans l'url uploadsuccess si le téléchargement à réussi 
@@ -59,8 +56,16 @@ if (isset($_POST["submit"])){                         //création de paramettre 
     } else{echo "vous ne pouvez pas télécharger ce format";} 
 }//fin de la première condition
 
+// Importer et mettre une valeur (instancier) une database
+// import du fichier database
 
-$nouvelId = $database->updatePromenade($auteurPromenade, $datePromenade, $paysPromenade, $villePromenade, $case_postalePromenade, $titrePromenade, $imagePromenade, $departPromenade, $arriveePromenade, $descriptionPromenade);
-var_dump($nouvelId);
-header("Location: afficherPromenade.php?id=" .nouvelId);
+require_once("database.php");
+$database = new DataBase();
+
+$Id = $database->insertRandonnee($idPromenade, $auteurPromenade, 
+$datePromenade, $paysPromenade, $villePromenade, 
+$case_postalePromenade, $titrePromenade, $fileDestination, 
+$departPromenade, $arriveePromenade, $descriptionPromenade);
+
+header("Location: afficherPromenade.php?id=".$Id);
 ?>
