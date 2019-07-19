@@ -26,16 +26,14 @@
     <header>
         <!--Bandeau-->
 
-        <div class="container-fluid barre text-white">
+        <div class="container-fluid barre">
             <div class="row">
                 <div class="col-sm-4 d-flex justify-content-center colMenu">
                     <h3>Promensuisse</h3>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center colMenu">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="assets/Home.png"></a>
-                </div>
-                
                 </div>
             </div>
         </div>
@@ -43,8 +41,8 @@
     <main>
         <!--Main-->
         <form action="process-AjouterPromenade.php" method="POST" enctype="multipart/form-data">
-        <button type="submit" name="submit" value="submit" class="btn btn-dark">Poster Promenade</button>
-            <div class="container-fluid" style="margin-top: 1%; margin-bottom: 1%;">
+        <button type="submit" name="submit" value="submit" class="btn btn-success">Poster Promenade</button>
+            <div class="container-fluid" style="margin-top: 1%; margin-bottom: 2%;">
                 <div class="row ">                
                     <input class="col-md-4" type="text" id="paramAuteur" name="auteur" 
                     placeholder="Votre nom : "> <br>
@@ -71,7 +69,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row textform">
                     <textarea rows="4" cols="50" input class="col-xs-12 col-md-12 mb-12 " 
                     type="text" id="paramDescription" class="form-control" placeholder="Description:" 
                     name="description"></textarea>

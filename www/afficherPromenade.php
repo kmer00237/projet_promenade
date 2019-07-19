@@ -29,7 +29,7 @@ $Promenade = $database->getPromenadeById($id);
     <header>
         <!--Bandeau-->
 
-        <div class="container-fluid barre text-white">
+        <div class="container-fluid barre">
             <div class="row">
                 <div class="col-sm-4 d-flex justify-content-center colMenu">
                     <h3>Promensuisse</h3>

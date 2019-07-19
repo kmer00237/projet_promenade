@@ -2,8 +2,11 @@
 .barre {
     width:100%;
     height: 50px;
-    background:rgb(28, 168, 0);
-    
+    color: black;
+    background: #18C704;
+    background: -moz-linear-gradient(top, #18C704 0%, #FFFFFF 50%, #18C704 100%);
+    background: -webkit-linear-gradient(top, #18C704 0%, #FFFFFF 50%, #18C704 100%);
+    background: linear-gradient(to bottom, #18C704 0%, #FFFFFF 50%, #18C704 100%);
 }
 
 .logo{
@@ -14,7 +17,6 @@
 body {margin:0;}
 
 .colMenu {
-    background:rgb(28, 168, 0);
     margin-top: 5px; 
     font-size: 10%;
 }
@@ -49,6 +51,10 @@ main {
 }
 .Description {
     width: 60%;
+}
+/*section ajouter*/ 
+.textform {
+    margin-bottom: 2%;
 }
 /*section footer | Bas de page*/
 footer {
