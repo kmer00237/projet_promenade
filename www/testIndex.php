@@ -3,10 +3,14 @@ require_once("database.php");
 require_once("classPromenade.php");
 //creation de la nouvelle connexion
 $database = new Database();
+//$promenade = new Promenades();
 //fonction GET permet de recupérer ce que nous avons dans la base de donnés par l'url
 $id = $_GET["id"];
 // Recupere une promenade en fonction de son id
 $listePromenade = $database->getAllPromenade();
+
+var_dump($listePromenade);
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
@@ -45,7 +49,7 @@ $listePromenade = $database->getAllPromenade();
             <div class="row">
                 <?php foreach($listePromenade as $Promenade){ ?>
                 <div class="col-sm-3 vignette">
-                    <!--<a href="afficherPromenade.php?id="<?php echo '.$Promenade->$id.'; ?> >--><div>
+                    <a href="afficherPromenade.php?id="<?php echo $Promenade->getId();?> > <div>
                         <?php echo '<img src="'.$Promenade->getImage().'" class="imageIcon"/>'; ?>
                     </div>
                     <div class="textVignette">
