@@ -7,7 +7,7 @@
     $database = new Database();
     
     //Recuperation de la liste des promenades
-    $nomPromenades = $database->getAllPromenade();    
+    $Promenade = $database->getAllPromenade();    
 ?>
 
 <!DOCTYPE html>
@@ -35,39 +35,46 @@
                 <a href="index.html">
                     <img src="assets/Home.png"></a>
                 </div>
-                <div class="col-sm-4 d-flex justify-content-center colMenu">
-                    <a href="ajouterPromenade.php">
-                    <button type="submit" class="btn btn-dark">Poster Promenade</button></a>
+                
                 </div>
             </div>
         </div>
     </header>
     <main>
         <!--Main-->
-        <form action="process-AjouterPromenade.php" method="POST">
-
+        <form action="process-AjouterPromenade.php" method="POST" enctype="multipart/form-data">
+        <button type="submit" name="submit" value="submit" class="btn btn-dark">Poster Promenade</button>
             <div class="container-fluid" style="margin-top: 1%; margin-bottom: 1%;">
                 <div class="row ">                
-                    <input class="col-md-4" type="text" name="Auteur" placeholder="Votre nom: "> <br>
-                    <input class="col-md-4" type="text" name="Pays" placeholder="Pays:">
-                    <input class="col-md-4" type="text" name="Pays" placeholder="Code Postale: ">
+                    <input class="col-md-4" type="text" id="paramAuteur" name="auteur" 
+                    placeholder="Votre nom : "> <br>
+                    <input class="col-md-4" type="text" id="paramPays" name="pays" 
+                    placeholder="Pays :">
+                    <input class="col-md-4" type="text" id="paramCase_postale" name="case_postale" 
+                    placeholder="Case Postale : ">
                    
                 </div>  
                 <div class="row">        
-                    <input class="col-xs-12 col-md-6 mb-1 " type="text" name="Titre de la promenade:" placeholder="Titre de la promenade:  " >
-                    <input class="col-xs-12 col-md-6 mb-1 " type="text" name="Ville:" placeholder="Ville:  " >
+                    <input class="col-xs-12 col-md-6 mb-1 " type="text" id="paramTitre" 
+                    name="titre" placeholder="Titre de la promenade :  " >
+                    <input class="col-xs-12 col-md-6 mb-1 " type="text" id="paramTitre" 
+                    name="ville" placeholder="Ville :" >
                 </div>
                 <div class="row">
-                    <input type="file" name="image"><br><br>
+                    <input type="file" name="files"><br><br>
                 </div>
                 <div class="row">
-                    <input class="col-xs-12 col-md-6 mb-1 " type="text" class="form-control" placeholder="Départ:" name="depart">
-                    <input class="col-xs-12 col-md-6 mb-1 " type="text" class="form-control" placeholder="Arrivee:" name="arrivee">
+                    <input class="col-xs-12 col-md-6 mb-1 " type="text" id="paramDepart" 
+                    class="form-control" placeholder="Départ:" name="depart">
+                    <input class="col-xs-12 col-md-6 mb-1 " type="text" id="paramArrivee" 
+                    class="form-control" placeholder="Arrivée:" name="arrivee">
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <textarea rows="4" cols="50" input class="col-xs-12 col-md-12 mb-12 " type="text" class="form-control" placeholder="Description:" name="description"></textarea>
+                    <textarea rows="4" cols="50" input class="col-xs-12 col-md-12 mb-12 " 
+                    type="text" id="paramDescription" class="form-control" placeholder="Description:" 
+                    name="description"></textarea>
                 </div>
             </div> 
         </form>

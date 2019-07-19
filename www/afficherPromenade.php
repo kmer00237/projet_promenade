@@ -35,7 +35,7 @@ $Promenade = $database->getPromenadeById($id);
                     <h3>Promensuisse</h3>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center colMenu">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="assets/Home.png"></a>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center colMenu">

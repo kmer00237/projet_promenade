@@ -29,10 +29,10 @@ class Database{
     }
 
     //Fonction pour insérer une promenade
-    public function insertRandonnee($nomAuteur, $datePromenade, 
-    $paysPromenade, $villePromenade, $case_postalePromenade, 
-    $titrePromenade,$imagePromenade, $departPromenade, 
-    $arriveePromenade, $descriptionPromenade)
+    public function insertRandonnee($auteurPromenade, 
+    $datePromenade, $paysPromenade, $villePromenade, 
+    $case_postalePromenade, $titrePromenade,$imagePromenade, 
+    $departPromenade, $arriveePromenade, $descriptionPromenade)
             
     {
 
@@ -46,7 +46,7 @@ class Database{
         //J'exécute la requête
         //En lui passant les valeurs en paramètres
         $pdoStatement->execute(array(
-            'paramAuteur'=>$nomAuteur,
+            'paramAuteur'=>$auteurPromenade,
             'paramDate'=>$datePromenade,
             'paramPays'=>$paysPromenade,
             'paramVille'=>$villePromenade,
@@ -66,7 +66,7 @@ class Database{
     public function getAllPromenade(){
         // On prépare la requete
         $pdoStatement = $this->connexion->prepare(
-            "SELECT image, titre, auteur, pays, ville FROM Promenades"
+            "SELECT id, image, titre, auteur, pays, ville FROM Promenades"
         );
         
         // On exécute la requete
@@ -96,9 +96,9 @@ class Database{
 
         //var_dump($pdoStatement->errorInfo());
          // Je recupere et je stocke le resultat
-         $promenade = $pdoStatement->fetchObject("Promenades");
+         $Promenade = $pdoStatement->fetchObject("Promenades");
            //var_dump($idPromenade);
-         return $promenade;              
+         return $Promenade;              
     
     }//Fin fonction pour lister toutes les promenades   
 }

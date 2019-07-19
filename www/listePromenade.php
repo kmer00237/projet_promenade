@@ -41,7 +41,7 @@ $listePromenade = $database->getAllPromenade();
                             " Pays :".$listePromenade->getPays().
                             " Ville :".$listePromenade->getVille().
 -->                        
-                            ?>
+                        </a>    
                     </div>
                 </div>
             </div>
