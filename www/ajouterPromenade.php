@@ -42,8 +42,8 @@
     </header>
     <main>
         <!--Main-->
-        <form action="process-AjouterPromenade.php" method="POST">
-        <button type="submit" class="btn btn-dark">Poster Promenade</button>
+        <form action="process-AjouterPromenade.php" method="POST" enctype="multipart/form-data">
+        <button type="submit" name="submit" value="submit" class="btn btn-dark">Poster Promenade</button>
             <div class="container-fluid" style="margin-top: 1%; margin-bottom: 1%;">
                 <div class="row ">                
                     <input class="col-md-4" type="text" id="paramAuteur" name="auteur" 
@@ -61,7 +61,7 @@
                     name="ville" placeholder="Ville :" >
                 </div>
                 <div class="row">
-                    <input type="file" name="image"><br><br>
+                    <input type="file" name="files"><br><br>
                 </div>
                 <div class="row">
                     <input class="col-xs-12 col-md-6 mb-1 " type="text" id="paramDepart" 

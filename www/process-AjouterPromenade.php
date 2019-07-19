@@ -18,7 +18,7 @@ $descriptionPromenade = $_POST["description"];
 
 if (isset($_POST["submit"])){                         //création de paramettre de vérification
     $file = $_FILES["files"];                         //fichier de variable superglobal avec le name de l'input image 
-    //print_r($file);
+
     $fileName = $_FILES["files"]["name"];              //instentie le fichier nom superglobal
     $fileTmpName = $_FILES["files"]["tmp_name"];
     $fileSize = $_FILES["files"]["size"];
@@ -41,18 +41,18 @@ if (isset($_POST["submit"])){                         //création de paramettre 
                 //créer un nom unique
                 $fileNameNew = uniqid("", true).".".$fileActualExt; 
                 //l'image renommée dansdossier de destination
-                $fileDestination = "uploads/".$fileNameNew; 
+                $fileDestination = "assets/".$fileNameNew; 
                 //prendre dans le fichier temporaire et le pousser dans la destination 
                 move_uploaded_file($fileTmpName, $fileDestination); 
                  //inscrit dans l'url uploadsuccess si le téléchargement à réussi 
                 //header("Location: indexFiles.php?uploadsuccess");
 
             //si c'est + que la taille souhaitée
-            } else {echo "votre image est trop lourde";} 
+            } else {die("votre image est trop lourde");} 
          //si l'image n'a pas pu être téléchargée
-        } else {echo "erreur de téléchargement";} 
+        } else {die("erreur de téléchargement");} 
     //si l'extention est fausse       
-    } else{echo "vous ne pouvez pas télécharger ce format";} 
+    } else{die("vous ne pouvez pas télécharger ce format");} 
 }//fin de la première condition
 
 
@@ -62,7 +62,7 @@ $database = new DataBase();
 
 $nouvelId = $database->insertRandonnee($auteurPromenade, $datePromenade, 
 $paysPromenade, $villePromenade, $case_postalePromenade, $titrePromenade, 
-$imagetPromenade, $departPromenade, $arriveePromenade, $descriptionPromenade);
+$fileDestination, $departPromenade, $arriveePromenade, $descriptionPromenade);
 
 header("Location: afficherPromenade.php?id=".$nouvelId);
 ?>

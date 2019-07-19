@@ -67,7 +67,7 @@ class Database{
     public function getAllPromenade(){
         // On prépare la requete
         $pdoStatement = $this->connexion->prepare(
-            "SELECT image, titre, auteur, pays, ville FROM Promenades"
+            "SELECT id, image, titre, auteur, pays, ville FROM Promenades"
         );
         
         // On exécute la requete
