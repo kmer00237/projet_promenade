@@ -40,9 +40,8 @@ class Database{
         $pdoStatement = $this->connexion->prepare(
             "INSERT INTO Promenades (auteur, date, pays, ville, 
             case_postale, titre, image, depart, arrivee, description) 
-            VALUES (:paramAuteur, :paramDate, :paramPays, :paramVille, 
-            :paramCase_postale, :paramTitre, :paramImage, :paramDepart, 
-            :paramArrivee, :paramDescription)");
+            VALUES (:paramAuteur, :paramDate, :paramPays, :paramVille, :paramCase_postale, 
+            :paramTitre, :paramImage, :paramDepart, :paramArrivee, :paramDescription)");
            
         //J'exécute la requête
         //En lui passant les valeurs en paramètres
